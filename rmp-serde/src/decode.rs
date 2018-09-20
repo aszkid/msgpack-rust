@@ -382,6 +382,8 @@ impl<'de, 'a, R: ReadSlice<'de>> serde::Deserializer<'de> for &'a mut Deserializ
         tuple_struct struct identifier tuple
         ignored_any
     }
+    
+    fn is_human_readable(&self) -> bool { false }
 }
 
 struct SeqAccess<'a, R: 'a> {

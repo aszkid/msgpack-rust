@@ -493,6 +493,8 @@ where
         self.serialize_u32(id)?;
         self.serialize_struct(name, len)
     }
+  
+    fn is_human_readable(&self) -> bool { false }
 }
 
 /// Serialize the given data structure as MessagePack into the I/O stream.
